@@ -42,7 +42,3 @@ ShiftScheduler/
 1. Enter employee names and select their shift preferences.
 2. Click "Add Employee" to add them to the list.
 3. Once all employees are added, click "Generate Schedule" to view the weekly schedule.
-
-## License
-
-This project is licensed under the MIT License.
