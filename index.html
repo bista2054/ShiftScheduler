@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Schedule Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Schedule Manager</h1>
+        <p>Create and manage employee work schedules for the week</p>
+        
+        <div id="employee-input-section">
+            <h2>Add Employees</h2>
+            <div class="employee-form">
+                <div class="form-group">
+                    <label for="employee-name">Employee Name:</label>
+                    <input type="text" id="employee-name" placeholder="Enter employee name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Shift Preferences (Priority Order):</label>
+                    <div class="priority-preferences">
+                        <div class="priority-group">
+                            <label>First Preference:</label>
+                            <select id="first-pref" class="preference-select">
+                                <option value="">No preference</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select>
+                        </div>
+                        <div class="priority-group">
+                            <label>Second Preference:</label>
+                            <select id="second-pref" class="preference-select" disabled>
+                                <option value="">No preference</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select>
+                        </div>
+                        <div class="priority-group">
+                            <label>Third Preference:</label>
+                            <select id="third-pref" class="preference-select" disabled>
+                                <option value="">No preference</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="add-employee-btn">Add Employee</button>
+            <div id="employee-list" class="employee-list"></div>
+            
+            <button id="generate-schedule-btn" class="hidden">Generate Schedule</button>
+            <div id="error-message" class="error"></div>
+        </div>
+        
+        <div id="schedule-display-section" class="schedule-display hidden">
+            <h2>Weekly Schedule</h2>
+            <div id="schedule-table"></div>
+            <button id="back-to-input-btn">Back to Employee Input</button>
+            <div id="success-message" class="success"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
